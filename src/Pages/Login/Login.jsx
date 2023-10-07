@@ -8,8 +8,8 @@ const Login = () => {
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold">Login now!</h1>
             <p className="py-6">
-              Provide Valid Email and Password That you previously used for
-              REgistration. For login. Or, Login with your Github/Google
+              Provide Valid Email and Password That you previously <br /> used
+              for REgistration. For login. Or, Login with your Github/Google
               Instant.
             </p>
           </div>
@@ -45,9 +45,12 @@ const Login = () => {
                 </label>
               </div>
               <div className="form-control mt-6">
-                <p>
-                  New Here Please{' '}
-                  <Link className="text-green-600 underline" to={'/register'}>
+                <p className="mb-2">
+                  New Here Please
+                  <Link
+                    className="text-green-600 underline"
+                    to={'/registration'}
+                  >
                     Register
                   </Link>
                 </p>
