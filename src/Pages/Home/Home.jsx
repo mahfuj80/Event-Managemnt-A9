@@ -2,11 +2,12 @@ import Carousel from '../../components/Carousel/Carousel';
 
 const Home = () => {
   return (
-    <main>
-      {/* carousel */}
-      <section>
+    <main className="relative">
+      {/* carousel Banner Section*/}
+      <section className="overflow-hidden md:overflow-auto">
         <Carousel></Carousel>
       </section>
+      {/* Services Section */}
       <section>
         <h2>This is services section</h2>
       </section>
@@ -15,9 +16,6 @@ const Home = () => {
       </section>
       <section>
         <h2>This is faq section</h2>
-      </section>
-      <section>
-        <h2>This is footer Section</h2>
       </section>
     </main>
   );

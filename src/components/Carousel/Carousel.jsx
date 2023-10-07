@@ -1,6 +1,6 @@
 const Carousel = () => {
   return (
-    <div className="carousel h-full">
+    <div className="carousel h-full overflow-hidden">
       {/* slider 1 */}
       <div
         id="slide1"
@@ -8,10 +8,10 @@ const Carousel = () => {
           backgroundImage:
             'url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)',
         }}
-        className="carousel-item relative w-full h-[80vh] bg-no-repeat bg-cover"
+        className="carousel-item relative w-[100vw] md:w-full bg-no-repeat bg-cover"
       >
         <div className="hero-overlay bg-opacity-60">
-          <div className="flex justify-center items-center h-full text-center text-neutral-content">
+          <div className="flex justify-center items-center h-full text-center text-neutral-content py-10 md:py-24">
             <div className="max-w-md">
               <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
               <p className="mb-5">
@@ -22,7 +22,7 @@ const Carousel = () => {
               <button className="btn btn-primary">Get Started</button>
             </div>
           </div>
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <div className="absolute flex justify-between transform -translate-y-1/2 delay-150 left-5 right-5 top-1/2">
             <a href="#slide5" className="btn btn-circle">
               ❮
             </a>
@@ -39,12 +39,12 @@ const Carousel = () => {
           backgroundImage:
             'url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)',
         }}
-        className="carousel-item relative w-full h-[80vh] bg-no-repeat bg-cover"
+        className="carousel-item relative w-[100vw] md:w-full bg-no-repeat bg-cover"
       >
         <div className="hero-overlay bg-opacity-60">
-          <div className="flex justify-center items-center h-full text-center text-neutral-content">
+          <div className="flex justify-center items-center h-full text-center text-neutral-content py-10 md:py-24">
             <div className="max-w-md">
-              <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
+              <h1 className="mb-5 text-5xl font-bold">Nothing There</h1>
               <p className="mb-5">
                 Provident cupiditate voluptatem et in. Quaerat fugiat ut
                 assumenda excepturi exercitationem quasi. In deleniti eaque aut
@@ -70,10 +70,10 @@ const Carousel = () => {
           backgroundImage:
             'url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)',
         }}
-        className="carousel-item relative w-full h-[80vh] bg-no-repeat bg-cover"
+        className="carousel-item relative w-[100vw] md:w-full bg-no-repeat bg-cover"
       >
         <div className="hero-overlay bg-opacity-60">
-          <div className="flex justify-center items-center h-full text-center text-neutral-content">
+          <div className="flex justify-center items-center h-full text-center text-neutral-content py-10 md:py-24">
             <div className="max-w-md">
               <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
               <p className="mb-5">
@@ -101,10 +101,10 @@ const Carousel = () => {
           backgroundImage:
             'url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)',
         }}
-        className="carousel-item relative w-full h-[80vh] bg-no-repeat bg-cover"
+        className="carousel-item relative w-[100vw] md:w-full bg-no-repeat bg-cover"
       >
         <div className="hero-overlay bg-opacity-60">
-          <div className="flex justify-center items-center h-full text-center text-neutral-content">
+          <div className="flex justify-center items-center h-full text-center text-neutral-content py-10 md:py-24">
             <div className="max-w-md">
               <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
               <p className="mb-5">
@@ -132,10 +132,10 @@ const Carousel = () => {
           backgroundImage:
             'url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)',
         }}
-        className="carousel-item relative w-full h-[80vh] bg-no-repeat bg-cover"
+        className="carousel-item relative w-[100vw] md:w-full bg-no-repeat bg-cover"
       >
         <div className="hero-overlay bg-opacity-60">
-          <div className="flex justify-center items-center h-full text-center text-neutral-content">
+          <div className="flex justify-center items-center h-full text-center text-neutral-content py-10 md:py-24">
             <div className="max-w-md">
               <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
               <p className="mb-5">
@@ -163,10 +163,10 @@ const Carousel = () => {
           backgroundImage:
             'url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)',
         }}
-        className="carousel-item relative w-full h-[80vh] bg-no-repeat bg-cover"
+        className="carousel-item relative w-[100vw] md:w-full bg-no-repeat bg-cover"
       >
         <div className="hero-overlay bg-opacity-60">
-          <div className="flex justify-center items-center h-full text-center text-neutral-content">
+          <div className="flex justify-center items-center h-full text-center text-neutral-content py-10 md:py-24">
             <div className="max-w-md">
               <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
               <p className="mb-5">
