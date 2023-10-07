@@ -1,8 +1,11 @@
+import Carousel from '../../components/Carousel/Carousel';
+
 const Home = () => {
   return (
     <main>
+      {/* carousel */}
       <section>
-        <h2>This is banner section</h2>
+        <Carousel></Carousel>
       </section>
       <section>
         <h2>This is services section</h2>

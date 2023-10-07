@@ -1,21 +1,21 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Nav = () => {
   const navLinks = (
     <>
       <li>
-        <Link to={'/'}>Home</Link>
+        <NavLink to={'/'}>Home</NavLink>
       </li>
       <li>
-        <Link to={'/login'}>Login</Link>
+        <NavLink to={'/login'}>Login</NavLink>
       </li>
       <li>
-        <Link to={'/registration'}>Register</Link>
+        <NavLink to={'/registration'}>Register</NavLink>
       </li>
     </>
   );
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 sticky z-10 opacity-[0.9] top-0">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
