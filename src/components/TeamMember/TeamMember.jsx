@@ -29,28 +29,29 @@ const TeamMember = () => {
         </div>
         <div className="-mx-4 flex flex-wrap justify-center">
           {members.map((member) => (
-            <>
-              <div className="w-full px-4 sm:w-3/4 md:w-2/4 lg:w-1/4">
-                <div className="hover:shadow-xl relative mb-8 rounded-xl bg-white text-center">
-                  <div className="p-4">
-                    <img
-                      className="w-full h-full"
-                      src={member.image}
-                      alt="logo"
-                    />
-                  </div>
-                  <h4 className=" text-xl font-semibold text-dark">
-                    {member.name}
-                  </h4>
-                  <p className="mb-3 text-sm">{member.title}</p>
-                  <div className="flex gap-4 mx-auto w-fit pb-4 text-2xl">
-                    <FaFacebook className="hover:text-blue-600 cursor-pointer"></FaFacebook>
-                    <FaYoutube className="hover:text-red-600 cursor-pointer"></FaYoutube>
-                    <FaLinkedin className="hover:text-blue-600 cursor-pointer"></FaLinkedin>
-                  </div>
+            <div
+              key={member?.id}
+              className="w-full px-4 sm:w-3/4 md:w-2/4 lg:w-1/4"
+            >
+              <div className="hover:shadow-xl relative mb-8 rounded-xl bg-white text-center">
+                <div className="p-4">
+                  <img
+                    className="w-full h-full"
+                    src={member?.image}
+                    alt="logo"
+                  />
+                </div>
+                <h4 className=" text-xl font-semibold text-dark">
+                  {member?.name}
+                </h4>
+                <p className="mb-3 text-sm">{member?.title}</p>
+                <div className="flex gap-4 mx-auto w-fit pb-4 text-2xl">
+                  <FaFacebook className="hover:text-blue-600 cursor-pointer"></FaFacebook>
+                  <FaYoutube className="hover:text-red-600 cursor-pointer"></FaYoutube>
+                  <FaLinkedin className="hover:text-blue-600 cursor-pointer"></FaLinkedin>
                 </div>
               </div>
-            </>
+            </div>
           ))}
         </div>
       </div>
