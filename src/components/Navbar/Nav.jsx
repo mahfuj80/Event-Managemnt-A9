@@ -1,16 +1,14 @@
 import { Link, NavLink } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 
 const Nav = () => {
+  const { user, logOut } = useAuth();
+
+  console.log(user);
   const navLinks = (
     <>
       <li>
         <NavLink to={'/'}>Home</NavLink>
-      </li>
-      <li>
-        <NavLink to={'/login'}>Login</NavLink>
-      </li>
-      <li>
-        <NavLink to={'/registration'}>Register</NavLink>
       </li>
     </>
   );
@@ -49,30 +47,51 @@ const Nav = () => {
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
       <div className="navbar-end">
-        <div className="dropdown dropdown-end">
-          <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-            <div className="w-10 rounded-full">
-              <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-            </div>
-          </label>
-          <ul
-            tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-          >
+        {user ? (
+          <div className="dropdown dropdown-end">
+            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+              <div className="w-10 rounded-full">
+                <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+              </div>
+            </label>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <a className="justify-between">
+                  Profile
+                  <span className="badge">New</span>
+                </a>
+              </li>
+              <li>
+                <a>Settings</a>
+              </li>
+              <li
+                onClick={() => {
+                  logOut()
+                    .then(() => {
+                      alert('Sign-out successful.');
+                    })
+                    .catch((error) => {
+                      alert(error);
+                    });
+                }}
+              >
+                <a>Logout</a>
+              </li>
+            </ul>
+          </div>
+        ) : (
+          <ul tabIndex={0} className="menu menu-horizontal px-1">
             <li>
-              <a className="justify-between">
-                Profile
-                <span className="badge">New</span>
-              </a>
+              <NavLink to={'/login'}>Login</NavLink>
             </li>
             <li>
-              <a>Settings</a>
-            </li>
-            <li>
-              <a>Logout</a>
+              <NavLink to={'/registration'}>Register</NavLink>
             </li>
           </ul>
-        </div>
+        )}
       </div>
     </div>
   );

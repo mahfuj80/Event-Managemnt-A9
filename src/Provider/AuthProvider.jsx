@@ -10,8 +10,10 @@ import auth from '../Firebase/Firebase';
 export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
   // register
   const createUser = (email, password) => {
+    setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
   // login
@@ -20,6 +22,7 @@ const AuthProvider = ({ children }) => {
   };
   // log Out
   const logOut = () => {
+    setLoading(true);
     return signOut(auth);
   };
 
@@ -38,6 +41,7 @@ const AuthProvider = ({ children }) => {
     loginUser,
     logOut,
     user,
+    loading,
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>

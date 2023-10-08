@@ -1,6 +1,27 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 
 const Login = () => {
+  const navigate = useNavigate();
+  const { loginUser } = useAuth();
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const form = new FormData(e.currentTarget);
+    const email = form.get('email');
+    const password = form.get('password');
+    loginUser(email, password)
+      .then((userCredential) => {
+        // Signed in
+        alert('sign in successfully', userCredential);
+        navigate('/');
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        alert(errorCode, errorMessage);
+      });
+  };
   return (
     <div>
       <div className="hero min-h-screen bg-base-200">
@@ -15,7 +36,7 @@ const Login = () => {
             </p>
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <form className="card-body">
+            <form onSubmit={handleLogin} className="card-body">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
@@ -58,7 +79,7 @@ const Login = () => {
                 <input
                   type="submit"
                   className="btn btn-primary"
-                  value="Submit"
+                  value="Login"
                 ></input>
               </div>
             </form>

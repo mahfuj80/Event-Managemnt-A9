@@ -4,7 +4,7 @@ import auth from '../../Firebase/Firebase';
 import { updateProfile } from 'firebase/auth';
 
 const Registration = () => {
-  const { createUser, user } = useAuth();
+  const { createUser } = useAuth();
   const handleResister = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
@@ -13,11 +13,7 @@ const Registration = () => {
     const email = form.get('email');
     const password = form.get('password');
     createUser(email, password)
-      .then((userCredential) => {
-        // Signed up
-        const users = userCredential.user;
-        console.log(users);
-        console.log(user);
+      .then(() => {
         updateProfile(auth.currentUser, {
           displayName: name,
           photoURL: image,
