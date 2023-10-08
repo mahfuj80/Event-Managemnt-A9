@@ -9,7 +9,7 @@ const TeamMember = () => {
       .then((data) => setMembers(data));
   }, []);
   return (
-    <section className="pt-20 pb-12 lg:pt-[120px] lg:pb-[90px] px-8 md:px-14">
+    <section className="pt-20 pb-12 lg:pt-[50px] lg:pb-[50px] px-8 md:px-14">
       <div className="container mx-auto">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
@@ -39,9 +39,10 @@ const TeamMember = () => {
                       alt="logo"
                     />
                   </div>
-                  <h4 className="mb-3 text-xl font-semibold text-dark">
+                  <h4 className=" text-xl font-semibold text-dark">
                     {member.name}
                   </h4>
+                  <p className="mb-3 text-sm">{member.title}</p>
                   <div className="flex gap-4 mx-auto w-fit pb-4 text-2xl">
                     <FaFacebook className="hover:text-blue-600 cursor-pointer"></FaFacebook>
                     <FaYoutube className="hover:text-red-600 cursor-pointer"></FaYoutube>

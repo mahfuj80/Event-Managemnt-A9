@@ -8,7 +8,7 @@ const Services = () => {
   }, []);
   console.log(services);
   return (
-    <section className="pt-20 pb-12 lg:pt-[120px] lg:pb-[90px] px-8 md:px-14">
+    <section className="pt-20 pb-12 lg:pt-[90px] lg:pb-12 px-8 md:px-14">
       <div className="container mx-auto">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
