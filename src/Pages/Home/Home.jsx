@@ -1,5 +1,4 @@
 import Carousel from '../../components/Carousel/Carousels';
-import Carousl from '../../components/Carousel/Carousels';
 import Faq from '../../components/Faq/Faq';
 import Services from '../../components/Services/Services';
 import TeamMember from '../../components/TeamMember/TeamMember';
@@ -9,8 +8,7 @@ const Home = () => {
     <main className="relative">
       {/* carousel Banner Section*/}
       <section className="overflow-hidden md:overflow-auto">
-        {/* <Carousel></Carousel> */}
-        <Carousl></Carousl>
+        <Carousel></Carousel>
       </section>
       {/* Services Section */}
 
