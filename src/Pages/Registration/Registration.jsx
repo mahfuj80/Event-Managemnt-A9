@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
+import auth from '../../Firebase/Firebase';
+import { updateProfile } from 'firebase/auth';
 
 const Registration = () => {
+  const { createUser, user } = useAuth();
   const handleResister = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
@@ -8,7 +12,32 @@ const Registration = () => {
     const image = form.get('image');
     const email = form.get('email');
     const password = form.get('password');
-    console.log(name, image, email, password);
+    createUser(email, password)
+      .then((userCredential) => {
+        // Signed up
+        const users = userCredential.user;
+        console.log(users);
+        console.log(user);
+        updateProfile(auth.currentUser, {
+          displayName: name,
+          photoURL: image,
+        })
+          .then(() => {
+            // Profile updated!
+            // ...
+          })
+          .catch((error) => {
+            console.log(error);
+            // An error occurred
+            // ...
+          });
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage);
+        // ..
+      });
   };
 
   return (
