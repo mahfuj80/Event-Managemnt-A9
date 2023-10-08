@@ -55,7 +55,11 @@ const Login = () => {
                     Register
                   </Link>
                 </p>
-                <button className="btn btn-primary">Login</button>
+                <input
+                  type="submit"
+                  className="btn btn-primary"
+                  value="Submit"
+                ></input>
               </div>
             </form>
           </div>

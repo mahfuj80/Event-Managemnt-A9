@@ -1,6 +1,16 @@
 import { Link } from 'react-router-dom';
 
 const Registration = () => {
+  const handleResister = (e) => {
+    e.preventDefault();
+    const form = new FormData(e.currentTarget);
+    const name = form.get('name');
+    const image = form.get('image');
+    const email = form.get('email');
+    const password = form.get('password');
+    console.log(name, image, email, password);
+  };
+
   return (
     <div>
       <div className="hero min-h-screen bg-base-200">
@@ -13,7 +23,7 @@ const Registration = () => {
             </p>
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <form className="card-body">
+            <form onSubmit={handleResister} className="card-body">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Name</span>
@@ -22,6 +32,18 @@ const Registration = () => {
                   type="text"
                   placeholder="name"
                   name="name"
+                  className="input input-bordered"
+                  required
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Image URL</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="image url"
+                  name="image"
                   className="input input-bordered"
                   required
                 />
@@ -62,7 +84,11 @@ const Registration = () => {
                     Login
                   </Link>
                 </p>
-                <button className="btn btn-primary">Register</button>
+                <input
+                  type="submit"
+                  className="btn btn-primary"
+                  value={'Resister'}
+                ></input>
               </div>
             </form>
           </div>
