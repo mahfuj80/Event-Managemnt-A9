@@ -1,4 +1,7 @@
 import Carousel from '../../components/Carousel/Carousel';
+import Faq from '../../components/Faq/Faq';
+import Services from '../../components/Services/Services';
+import TeamMember from '../../components/TeamMember/TeamMember';
 
 const Home = () => {
   return (
@@ -8,15 +11,12 @@ const Home = () => {
         <Carousel></Carousel>
       </section>
       {/* Services Section */}
-      <section>
-        <h2>This is services section</h2>
+
+      <Services></Services>
+      <section className="bg-blend-darken">
+        <TeamMember></TeamMember>
       </section>
-      <section>
-        <h2>This is team member section</h2>
-      </section>
-      <section>
-        <h2>This is faq section</h2>
-      </section>
+      <Faq></Faq>
     </main>
   );
 };

@@ -6,6 +6,7 @@ const Login = () => {
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
+            <img className="w-fit mx-auto" src="/logo.png" alt="logo" />
             <h1 className="text-5xl font-bold">Login now!</h1>
             <p className="py-6">
               Provide Valid Email and Password That you previously <br /> used

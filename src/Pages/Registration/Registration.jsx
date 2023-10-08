@@ -6,6 +6,7 @@ const Registration = () => {
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
+            <img className="w-fit mx-auto" src="/logo.png" alt="logo" />
             <h1 className="text-5xl font-bold">Register Now!</h1>
             <p className="py-6">
               Please Provide Your Email And Password and Name For Registration.
