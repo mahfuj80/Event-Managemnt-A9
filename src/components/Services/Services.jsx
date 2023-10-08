@@ -30,7 +30,7 @@ const Services = () => {
           {services.map((service) => (
             <>
               <div className="w-full px-4 sm:w-4/5 md:w-1/2 lg:w-1/3">
-                <div className="hover:shadow-xl relative mb-8 rounded-xl border-2 border-[#b9b9b9] bg-white p-10 text-center md:px-8 lg:py-9 lg:px-6 xl:p-10 2xl:p-12">
+                <div className="hover:drop-shadow-2xl shadow-black relative mb-8 rounded-xl border-2 border-[#b9b9b9] bg-white p-10 text-center md:px-8 lg:py-9 lg:px-6 xl:p-10 2xl:p-12">
                   <div className="relative z-10 mx-auto inline-flex items-center">
                     <img
                       className="w-full h-full"
