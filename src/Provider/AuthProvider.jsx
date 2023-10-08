@@ -1,7 +1,18 @@
-import React from 'react';
+import { createContext } from 'react';
+import PropTypes from 'prop-types';
 
-const AuthProvider = () => {
-  return <div></div>;
+export const AuthContext = createContext(null);
+const AuthProvider = ({ children }) => {
+  const authInfo = {
+    name: 'manfun',
+  };
+  return (
+    <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
+  );
+};
+
+AuthProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export default AuthProvider;
