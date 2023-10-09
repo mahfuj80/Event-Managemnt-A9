@@ -18,12 +18,14 @@ const Accordions = () => {
           <Accordion allowZeroExpanded>
             <AccordionItem>
               <AccordionItemHeading>
-                <AccordionItemButton>What is your Question</AccordionItemButton>
+                <AccordionItemButton>
+                  How do I request a quote for my event?
+                </AccordionItemButton>
               </AccordionItemHeading>
               <AccordionItemPanel>
-                My Answer is nothing but i want to fuck you My Answer is nothing
-                but i want to fuck you My Answer is nothing but i want to fuck
-                you
+                Provide details on how potential clients can request a quote for
+                their event, including the preferred method of contact and any
+                specific information you need to provide an accurate quote.
               </AccordionItemPanel>
             </AccordionItem>
           </Accordion>
@@ -31,12 +33,14 @@ const Accordions = () => {
           <Accordion allowZeroExpanded>
             <AccordionItem>
               <AccordionItemHeading>
-                <AccordionItemButton>What is your Question</AccordionItemButton>
+                <AccordionItemButton>
+                  What types of events do you specialize in managing?
+                </AccordionItemButton>
               </AccordionItemHeading>
               <AccordionItemPanel>
-                My Answer is nothing but i want to fuck you My Answer is nothing
-                but i want to fuck you My Answer is nothing but i want to fuck
-                you
+                Clarify the types of events your company specializes in, such as
+                birthdays, weddings, corporate events, etc., to help clients
+                understand if their event aligns with your expertise.
               </AccordionItemPanel>
             </AccordionItem>
           </Accordion>
@@ -44,12 +48,14 @@ const Accordions = () => {
           <Accordion allowZeroExpanded>
             <AccordionItem>
               <AccordionItemHeading>
-                <AccordionItemButton>What is your Question</AccordionItemButton>
+                <AccordionItemButton>
+                  Can I customize the services offered to suit my event needs?
+                </AccordionItemButton>
               </AccordionItemHeading>
               <AccordionItemPanel>
-                My Answer is nothing but i want to fuck you My Answer is nothing
-                but i want to fuck you My Answer is nothing but i want to fuck
-                you
+                Explain your company flexibility in customizing services based
+                on the unique requirements of each event, and how clients can
+                tailor services to meet their specific needs.
               </AccordionItemPanel>
             </AccordionItem>
           </Accordion>
@@ -59,10 +65,14 @@ const Accordions = () => {
           <Accordion allowZeroExpanded>
             <AccordionItem>
               <AccordionItemHeading>
-                <AccordionItemButton>What is your Question</AccordionItemButton>
+                <AccordionItemButton>
+                  How far in advance should I book your services for my event?
+                </AccordionItemButton>
               </AccordionItemHeading>
               <AccordionItemPanel>
-                My Answer is nothing but i want to fuck you
+                Provide guidance on the recommended timeframe for booking your
+                services to ensure availability and ample time for planning and
+                coordination.
               </AccordionItemPanel>
             </AccordionItem>
           </Accordion>
@@ -70,10 +80,14 @@ const Accordions = () => {
           <Accordion allowZeroExpanded>
             <AccordionItem>
               <AccordionItemHeading>
-                <AccordionItemButton>What is your Question</AccordionItemButton>
+                <AccordionItemButton>
+                  What is your cancellation or rescheduling policy?
+                </AccordionItemButton>
               </AccordionItemHeading>
               <AccordionItemPanel>
-                My Answer is nothing but i want to fuck you
+                Outline your company policy regarding cancellations,
+                rescheduling, and any associated fees to manage client
+                expectations and avoid misunderstandings.
               </AccordionItemPanel>
             </AccordionItem>
           </Accordion>
@@ -81,10 +95,15 @@ const Accordions = () => {
           <Accordion allowZeroExpanded>
             <AccordionItem>
               <AccordionItemHeading>
-                <AccordionItemButton>What is your Question</AccordionItemButton>
+                <AccordionItemButton>
+                  How do you handle unexpected issues or emergencies during an
+                  event?
+                </AccordionItemButton>
               </AccordionItemHeading>
               <AccordionItemPanel>
-                My Answer is nothing but i want to fuck you
+                Describe your approach to handling unexpected challenges during
+                an event, including the measures in place to ensure a smooth and
+                successful event experience for the client.
               </AccordionItemPanel>
             </AccordionItem>
           </Accordion>
