@@ -34,6 +34,7 @@ const router = createBrowserRouter([
             <Bookings></Bookings>
           </PrivateRoute>
         ),
+        loader: () => fetch('/services.json'),
       },
       {
         path: '/reviews',
