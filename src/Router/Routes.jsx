@@ -9,6 +9,7 @@ import Bookings from '../Pages/Bookings/Bookings';
 import Reviews from '../Pages/Reviews/Reviews';
 import PrivateRoute from '../Private/PrivateRoutes';
 import Profile from '../Pages/Profile/Profile';
+import Settings from '../Pages/Settings/Settings';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: '/profile',
         element: <Profile></Profile>,
+      },
+      {
+        path: '/settings',
+        element: <Settings></Settings>,
       },
       {
         path: '/bookings',
