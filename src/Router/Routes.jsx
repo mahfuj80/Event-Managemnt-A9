@@ -8,6 +8,7 @@ import EventDetails from '../Pages/EventDetails/EventDetails';
 import Bookings from '../Pages/Bookings/Bookings';
 import Reviews from '../Pages/Reviews/Reviews';
 import PrivateRoute from '../Private/PrivateRoutes';
+import Profile from '../Pages/Profile/Profile';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: '/registration',
         element: <Registration></Registration>,
+      },
+      {
+        path: '/profile',
+        element: <Profile></Profile>,
       },
       {
         path: '/bookings',
