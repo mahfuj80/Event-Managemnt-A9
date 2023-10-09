@@ -5,7 +5,7 @@ import { FaGithub, FaGoogle } from 'react-icons/fa';
 import toast from 'react-hot-toast';
 
 const Login = () => {
-  const { user, loginUser, googleSignIn } = useAuth();
+  const { user, loginUser, googleSignIn, githubSignIn } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
   if (user) {
@@ -31,11 +31,9 @@ const Login = () => {
   };
   const handleGoogle = () => {
     googleSignIn()
-      .then((result) => {
-        // This gives you a Google Access Token. You can use it to access the Google API.
-        const credential = GoogleAuthProvider.credentialFromResult(result);
+      .then(() => {
         // Signed in
-        toast.success('sign in successfully', credential);
+        toast.success('sign in successfully');
         navigate(location?.state ? location.state : '/');
         // ...
       })
@@ -44,6 +42,18 @@ const Login = () => {
         const errorMessage = error.message;
         toast.error(errorMessage);
         // ...
+      });
+  };
+  const handleGithub = () => {
+    githubSignIn()
+      .then(() => {
+        toast.success('sign in successfully');
+        navigate(location?.state ? location.state : '/');
+      })
+      .catch((error) => {
+        // Handle Errors here.
+        const errorMessage = error.message;
+        toast.error(errorMessage);
       });
   };
   return (
@@ -115,7 +125,10 @@ const Login = () => {
               >
                 <FaGoogle></FaGoogle>
               </button>
-              <button className="btn btn-primary">
+              <button
+                onClick={() => handleGithub()}
+                className="btn btn-primary"
+              >
                 <FaGithub></FaGithub>
               </button>
             </div>
