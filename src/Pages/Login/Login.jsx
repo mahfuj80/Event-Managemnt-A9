@@ -1,6 +1,7 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import { GoogleAuthProvider } from 'firebase/auth';
+import { FaGithub, FaGoogle } from 'react-icons/fa';
 
 const Login = () => {
   const { user, loginUser, googleSignIn } = useAuth();
@@ -122,9 +123,11 @@ const Login = () => {
                 onClick={() => handleGoogle()}
                 className="btn btn-primary"
               >
-                google
+                <FaGoogle></FaGoogle>
               </button>
-              <button className="btn btn-primary"> Github</button>
+              <button className="btn btn-primary">
+                <FaGithub></FaGithub>
+              </button>
             </div>
           </div>
         </div>

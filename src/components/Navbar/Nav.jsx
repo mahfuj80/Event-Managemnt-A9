@@ -4,7 +4,7 @@ import useAuth from '../../hooks/useAuth';
 const Nav = () => {
   const { user, logOut } = useAuth();
 
-  console.log(user?.photoURL);
+  // console.log(user?.photoURL);
   const navLinks = (
     <>
       <li>
@@ -54,23 +54,27 @@ const Nav = () => {
       </div>
       <div className="navbar-end">
         {user ? (
-          <div className="dropdown dropdown-end">
-            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-              <div className="w-10 rounded-full">
-                <img src={user.photoURL} />
-              </div>
-            </label>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-            >
-              <li>
-                <Link to={'/profile'}>Profile</Link>
+          <>
+            <ul tabIndex={0} className="menu menu-horizontal px-1">
+              <li className="bg-gray-200 font-bold rounded-lg">
+                <button
+                  onClick={() => {
+                    return logOut()
+                      .then(() => {
+                        alert('Sign-out successful.');
+                      })
+                      .catch((error) => {
+                        alert(error);
+                      });
+                  }}
+                >
+                  Logout
+                </button>
               </li>
-              <li>
-                <Link to={'/settings'}>Settings</Link>
-              </li>
-              <li
+              <li className="font-bold mt-2">{user.displayName}</li>
+            </ul>
+            <div className="dropdown dropdown-end">
+              <button
                 onClick={() => {
                   logOut()
                     .then(() => {
@@ -80,11 +84,38 @@ const Nav = () => {
                       alert(error);
                     });
                 }}
+              ></button>
+              <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                <div className="w-10 rounded-full">
+                  <img src={user.photoURL} alt="profile_image" />
+                </div>
+              </label>
+              <ul
+                tabIndex={0}
+                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
               >
-                <a>Logout</a>
-              </li>
-            </ul>
-          </div>
+                <li>
+                  <Link to={'/profile'}>Profile</Link>
+                </li>
+                <li>
+                  <Link to={'/settings'}>Settings</Link>
+                </li>
+                <li
+                  onClick={() => {
+                    logOut()
+                      .then(() => {
+                        alert('Sign-out successful.');
+                      })
+                      .catch((error) => {
+                        alert(error);
+                      });
+                  }}
+                >
+                  <a>Logout</a>
+                </li>
+              </ul>
+            </div>
+          </>
         ) : (
           <ul tabIndex={0} className="menu menu-horizontal px-1">
             <li>
