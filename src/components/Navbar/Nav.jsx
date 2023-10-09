@@ -1,10 +1,11 @@
 import { Link, NavLink } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Nav = () => {
   const { user, logOut } = useAuth();
 
-  // console.log(user?.photoURL);
+  console.log(user?.photoURL);
   const navLinks = (
     <>
       <li>
@@ -20,6 +21,8 @@ const Nav = () => {
   );
   return (
     <div className="navbar bg-base-100 sticky z-10 opacity-[0.9] top-0">
+      <Toaster position="top-center" reverseOrder={true} />
+
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -61,10 +64,10 @@ const Nav = () => {
                   onClick={() => {
                     return logOut()
                       .then(() => {
-                        alert('Sign-out successful.');
+                        toast.success('Successfully Sign out');
                       })
                       .catch((error) => {
-                        alert(error);
+                        toast.error(error);
                       });
                   }}
                 >

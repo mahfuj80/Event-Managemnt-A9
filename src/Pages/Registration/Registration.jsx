@@ -2,6 +2,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import auth from '../../Firebase/Firebase';
 import { updateProfile } from 'firebase/auth';
+import toast from 'react-hot-toast';
 
 const Registration = () => {
   const { user, createUser } = useAuth();
@@ -19,19 +20,19 @@ const Registration = () => {
     const password = form.get('password');
     // Check password length
     if (password.length < 6) {
-      alert('Password should be at least 6 characters long.');
+      toast.error('Password should be at least 6 characters long.');
       return;
     }
 
     // Check for capital letter
     if (!/[A-Z]/.test(password)) {
-      alert('Password should contain at least one capital letter.');
+      toast.error('Password should contain at least one capital letter.');
       return;
     }
 
     // Check for special character
     if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
-      alert('Password should contain at least one special character.');
+      toast.error('Password should contain at least one special character.');
       return;
     }
     createUser(email, password)
@@ -45,15 +46,13 @@ const Registration = () => {
             // ...
           })
           .catch((error) => {
-            const errorCode = error.code;
             const errorMessage = error.message;
-            alert(errorMessage);
+            toast.error(errorMessage);
           });
       })
       .catch((error) => {
-        const errorCode = error.code;
         const errorMessage = error.message;
-        alert(errorMessage);
+        toast.error(errorMessage);
         // ..
       });
   };

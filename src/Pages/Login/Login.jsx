@@ -2,6 +2,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import { GoogleAuthProvider } from 'firebase/auth';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
+import toast from 'react-hot-toast';
 
 const Login = () => {
   const { user, loginUser, googleSignIn } = useAuth();
@@ -17,16 +18,15 @@ const Login = () => {
     const email = form.get('email');
     const password = form.get('password');
     loginUser(email, password)
-      .then((userCredential) => {
+      .then(() => {
         // Signed in
-        alert('sign in successfully', userCredential);
+        toast.success('sign in successfully');
         navigate(location?.state ? location.state : '/');
         // ...
       })
       .catch((error) => {
-        const errorCode = error.code;
         const errorMessage = error.message;
-        alert(errorCode);
+        toast.error(errorMessage);
       });
   };
   const handleGoogle = () => {
@@ -34,25 +34,15 @@ const Login = () => {
       .then((result) => {
         // This gives you a Google Access Token. You can use it to access the Google API.
         const credential = GoogleAuthProvider.credentialFromResult(result);
-        const token = credential.accessToken;
-        // The signed-in user info.
-        const user = result.user;
-        // IdP data available using getAdditionalUserInfo(result)
-        // ...
         // Signed in
-        alert('sign in successfully', credential);
+        toast.success('sign in successfully', credential);
         navigate(location?.state ? location.state : '/');
         // ...
       })
       .catch((error) => {
         // Handle Errors here.
-        const errorCode = error.code;
         const errorMessage = error.message;
-        // The email of the user's account used.
-        const email = error.customData.email;
-        // The AuthCredential type that was used.
-        const credential = GoogleAuthProvider.credentialFromError(error);
-        console.log(error);
+        toast.error(errorMessage);
         // ...
       });
   };
