@@ -31,6 +31,9 @@ const EventDetails = () => {
             <span className="text-blue-500">Description: </span>
             {displayService?.detailed_description}
           </p>
+          <p className="my-12 text-center text-3xl text font-bold text-green-800">
+            Price: ${displayService?.price}
+          </p>
         </div>
         <div className="flex flex-col items-center justify-center">
           <img className="w-[200px]" src={displayService?.logo} alt="logo" />
