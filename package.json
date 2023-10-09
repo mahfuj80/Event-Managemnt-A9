@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@types/react-router": "^5.1.20",
+    "aos": "^2.3.4",
     "firebase": "^10.4.0",
     "flowbite-react": "^0.6.4",
     "localforage": "^1.10.0",
