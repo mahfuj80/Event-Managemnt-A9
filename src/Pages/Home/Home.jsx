@@ -37,7 +37,7 @@ const Home = () => {
       <section
         data-aos="fade-right"
         data-aos-easing="linear"
-        data-aos-duration="1500"
+        data-aos-duration="1000"
       >
         <Faq></Faq>
       </section>

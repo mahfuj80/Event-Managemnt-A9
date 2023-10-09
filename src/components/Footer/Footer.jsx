@@ -1,6 +1,12 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 const Footer = () => {
+  useEffect(() => {
+    AOS.init({});
+  }, []);
   return (
-    <div>
+    <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
       <footer className="footer footer-center p-10 bg-[#d4d4d4] text-black">
         <aside>
           <img src="/logo.png" alt="logo" />
