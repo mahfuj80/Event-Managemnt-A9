@@ -4,7 +4,7 @@ import useAuth from '../../hooks/useAuth';
 const Nav = () => {
   const { user, logOut } = useAuth();
 
-  console.log(user);
+  console.log(user?.photoURL);
   const navLinks = (
     <>
       <li>

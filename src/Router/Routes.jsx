@@ -31,11 +31,19 @@ const router = createBrowserRouter([
       },
       {
         path: '/profile',
-        element: <Profile></Profile>,
+        element: (
+          <PrivateRoute>
+            <Profile></Profile>
+          </PrivateRoute>
+        ),
       },
       {
         path: '/settings',
-        element: <Settings></Settings>,
+        element: (
+          <PrivateRoute>
+            <Settings></Settings>
+          </PrivateRoute>
+        ),
       },
       {
         path: '/bookings',
@@ -56,7 +64,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/details/:id',
-        element: <EventDetails></EventDetails>,
+        element: (
+          <PrivateRoute>
+            <EventDetails></EventDetails>
+          </PrivateRoute>
+        ),
         loader: () => fetch('/services.json'),
       },
     ],
