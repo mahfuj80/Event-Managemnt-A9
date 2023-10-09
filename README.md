@@ -1,8 +1,12 @@
-# React + Vite
+# React + Firebase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project features:
 
-Currently, two official plugins are available:
+- There are many features in this project.
+- login wit Google and Github.
+- Forget Password will be add soon.
+- This project mainly use Context-api, custom hook, React Router, Privet Route, && Firebase.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
+
+<h1 style="text-align:center">Thank You</h1>
