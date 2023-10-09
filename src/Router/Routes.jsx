@@ -7,6 +7,8 @@ import Registration from '../Pages/Registration/Registration';
 import EventDetails from '../Pages/EventDetails/EventDetails';
 import Bookings from '../Pages/Bookings/Bookings';
 import Reviews from '../Pages/Reviews/Reviews';
+import PrivateRoute from '../Private/PrivateRoutes';
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -27,11 +29,19 @@ const router = createBrowserRouter([
       },
       {
         path: '/bookings',
-        element: <Bookings></Bookings>,
+        element: (
+          <PrivateRoute>
+            <Bookings></Bookings>
+          </PrivateRoute>
+        ),
       },
       {
         path: '/reviews',
-        element: <Reviews></Reviews>,
+        element: (
+          <PrivateRoute>
+            <Reviews></Reviews>
+          </PrivateRoute>
+        ),
       },
       {
         path: '/details/:id',
