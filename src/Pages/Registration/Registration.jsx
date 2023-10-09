@@ -40,15 +40,15 @@ const Registration = () => {
             // ...
           })
           .catch((error) => {
-            console.log(error);
-            // An error occurred
-            // ...
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            alert(errorMessage);
           });
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(errorCode, errorMessage);
+        alert(errorMessage);
         // ..
       });
   };
