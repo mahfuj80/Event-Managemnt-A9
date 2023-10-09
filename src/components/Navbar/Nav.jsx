@@ -10,6 +10,12 @@ const Nav = () => {
       <li>
         <NavLink to={'/'}>Home</NavLink>
       </li>
+      <li>
+        <NavLink to={'/reviews'}>Reviews</NavLink>
+      </li>
+      <li>
+        <NavLink to={'/bookings'}>Bookings</NavLink>
+      </li>
     </>
   );
   return (

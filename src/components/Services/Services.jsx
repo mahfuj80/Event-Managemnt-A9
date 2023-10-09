@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 const Services = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {
@@ -50,7 +51,9 @@ const Services = () => {
                   </span>
                 </p>
                 <p className="text-body-color">{service?.short_description}</p>
-                <button className="btn btn-primary my-2">Details</button>
+                <Link to={`/details/${service?.id}`}>
+                  <button className="btn btn-primary my-2">Details</button>
+                </Link>
               </div>
             </div>
           ))}
