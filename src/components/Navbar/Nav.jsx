@@ -81,10 +81,10 @@ const Nav = () => {
                 onClick={() => {
                   logOut()
                     .then(() => {
-                      alert('Sign-out successful.');
+                      toast.success('Sign-out successful.');
                     })
                     .catch((error) => {
-                      alert(error);
+                      toast.error(error);
                     });
                 }}
               ></button>
@@ -107,10 +107,10 @@ const Nav = () => {
                   onClick={() => {
                     logOut()
                       .then(() => {
-                        alert('Sign-out successful.');
+                        toast.success('Sign-out successful.');
                       })
                       .catch((error) => {
-                        alert(error);
+                        toast.error(error);
                       });
                   }}
                 >
