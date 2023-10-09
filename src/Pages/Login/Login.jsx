@@ -3,9 +3,13 @@ import useAuth from '../../hooks/useAuth';
 import { GoogleAuthProvider } from 'firebase/auth';
 
 const Login = () => {
-  const { loginUser, googleSignIn } = useAuth();
+  const { user, loginUser, googleSignIn } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
+  if (user) {
+    navigate('/');
+    return;
+  }
   const handleLogin = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);

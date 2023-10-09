@@ -1,10 +1,15 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import auth from '../../Firebase/Firebase';
 import { updateProfile } from 'firebase/auth';
 
 const Registration = () => {
-  const { createUser } = useAuth();
+  const { user, createUser } = useAuth();
+  const navigate = useNavigate();
+  if (user) {
+    navigate('/');
+    return;
+  }
   const handleResister = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
