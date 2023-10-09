@@ -1,6 +1,5 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
-import { GoogleAuthProvider } from 'firebase/auth';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
 import toast from 'react-hot-toast';
 
@@ -117,20 +116,22 @@ const Login = () => {
                 ></input>
               </div>
             </form>
-            <div className="px-8 pb-8 text-center space-x-4">
+            <div className="px-8 pb-8 text-center flex gap-2 flex-col">
               <p className="text-xl font-bold mb-3">Sign in with</p>
-              <button
-                onClick={() => handleGoogle()}
-                className="btn btn-primary"
-              >
-                <FaGoogle></FaGoogle>
-              </button>
-              <button
-                onClick={() => handleGithub()}
-                className="btn btn-primary"
-              >
-                <FaGithub></FaGithub>
-              </button>
+              <div className="flex gap-4 items-center justify-center">
+                <button
+                  onClick={() => handleGoogle()}
+                  className="btn btn-primary"
+                >
+                  <FaGoogle className="text-2xl text-white"></FaGoogle>
+                </button>
+                <button
+                  onClick={() => handleGithub()}
+                  className="btn btn-primary"
+                >
+                  <FaGithub className="text-2xl text-white"></FaGithub>
+                </button>
+              </div>
             </div>
           </div>
         </div>
