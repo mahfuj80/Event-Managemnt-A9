@@ -4,7 +4,7 @@
     "name": "Wedding",
     "logo": "https://i.ibb.co/FbC5mHC/wedding.png",
     "background": "https://i.ibb.co/G54zFpv/Wedding-banner.png",
-    "price": 20.99,
+    "price": 20000.0,
     "short_description": "Plan your dream wedding with our expert wedding planners. We'll make your special day truly magical.",
     "detailed_description": "Make your dream wedding a reality with our dedicated team of wedding planners. From elegant venues to exquisite decor and personalized services, we ensure every detail is perfect. Celebrate the start of your beautiful journey together with a magical wedding experience. Our expert planners will work closely with you to understand your vision and bring it to life. Whether you dream of a traditional ceremony or a modern celebration, we have the expertise to make it extraordinary. Your wedding day should be a reflection of your love story, and we're here to make it unforgettable for you and your guests."
   },
@@ -13,7 +13,7 @@
     "name": "Birthday Party",
     "logo": "https://i.ibb.co/kqsk6y5/birthday.png",
     "background": "https://i.ibb.co/khqjSw7/Birthday-banner.png",
-    "price": 25.99,
+    "price": 25000.0,
     "short_description": "Celebrate another year of life in style! Choose from a variety of themes and make your birthday unforgettable.",
     "detailed_description": "Mark another year of your life with an unforgettable birthday celebration. Whether you prefer an intimate gathering or a lively party, we'll make it special. From fun themes to delicious cakes, we ensure your birthday is a day to cherish and remember. Our team will work with you to customize every aspect, ensuring it aligns with your personality and preferences. Let your imagination run wild, and we'll turn your dream birthday into a reality. Enjoy the day with your loved ones, create lasting memories, and let us handle the details to make it a stress-free and joyous occasion."
   },
@@ -22,7 +22,7 @@
     "name": "Anniversary",
     "logo": "https://i.ibb.co/5k4hW1p/anniversary.png",
     "background": "https://i.ibb.co/bvbdLYD/Anniversary-banner.png",
-    "price": 15.99,
+    "price": 15000.0,
     "short_description": "Commemorate your years of love and togetherness with a memorable anniversary event. Customized just for.",
     "detailed_description": "Celebrate the love and togetherness you've shared over the years with a personalized anniversary event. Whether it's a romantic dinner or a grand party, we tailor it to your unique love story. Rekindle the magic and create lasting memories on this special day. Anniversaries are a milestone, and we believe in making them truly exceptional. Our team pays meticulous attention to every detail, ensuring the event mirrors your journey of love. Let us plan an anniversary celebration that encapsulates the beautiful moments you've shared, celebrating your enduring love and commitment to each other."
   },
@@ -31,7 +31,7 @@
     "name": "Engagement Party",
     "logo": "https://i.ibb.co/3NvSx8R/engagement.png",
     "background": "https://i.ibb.co/pQkJJ4Q/Engagement-banner.png",
-    "price": 30.5,
+    "price": 30000.0,
     "short_description": "Announce your engagement with a bang! Host a fantastic engagement party that reflects your unique love",
     "detailed_description": "Announce your engagement in style with a party that reflects your unique love story. Whether it's an elegant affair or a fun-filled event, we'll capture the essence of your relationship. Let your engagement party be a sneak peek into the beautiful journey you're about to embark on. Our team is dedicated to crafting an event that mirrors your love story and showcases the excitement of your new chapter. From the decor to the entertainment, every element will echo the love and joy you share. Celebrate your engagement surrounded by the warmth of friends and family, marking the beginning of your beautiful union."
   },
@@ -40,7 +40,7 @@
     "name": "Retirement Party",
     "logo": "https://i.ibb.co/1YgykXG/retirement.png",
     "background": "https://i.ibb.co/HHC1Fy4/Retirment-banner.png",
-    "price": 18.75,
+    "price": 18000.0,
     "short_description": "Celebrate years of hard work and dedication with a memorable retirement party. Bid farewell in style!",
     "detailed_description": "Bid farewell to a fulfilling career with a retirement party that reflects your dedication. Celebrate the years of hard work and achievements with colleagues and friends. Let the retirement party be a memorable transition into a new phase of life, filled with exciting adventures and well-deserved relaxation. Retirement is a time to look back on a successful career and forward to new opportunities. We'll create an event that captures the essence of your professional journey and celebrates the legacy you leave behind. Enjoy this moment surrounded by well-wishers, reflecting on a career well-lived."
   },
@@ -49,7 +49,7 @@
     "name": "Baby Shower",
     "logo": "https://i.ibb.co/k8Hw07p/baby-Shower.png",
     "background": "https://i.ibb.co/L10m2fN/Baby-Shower-Banner.png",
-    "price": 22.0,
+    "price": 22000.0,
     "short_description": "Welcome the newest member of your family with a joyous baby shower. Let's make it a day to remember.",
     "detailed_description": "Celebrate the upcoming arrival of your bundle of joy with a joyous baby shower. Surround yourself with love, laughter, and anticipation as you prepare for this new chapter of parenthood. Let the baby shower be a day of excitement and warmth, filled with blessings and well-wishes for the beautiful journey ahead. Parenthood is a beautiful adventure, and the baby shower marks the beginning of this exciting journey. We'll craft an event that mirrors your excitement and joy, filled with love and cherished moments. Celebrate with your loved ones, and let's create memories to treasure as you await the arrival of your little one."
   }
