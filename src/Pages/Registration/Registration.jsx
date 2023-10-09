@@ -12,6 +12,23 @@ const Registration = () => {
     const image = form.get('image');
     const email = form.get('email');
     const password = form.get('password');
+    // Check password length
+    if (password.length < 6) {
+      alert('Password should be at least 6 characters long.');
+      return;
+    }
+
+    // Check for capital letter
+    if (!/[A-Z]/.test(password)) {
+      alert('Password should contain at least one capital letter.');
+      return;
+    }
+
+    // Check for special character
+    if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+      alert('Password should contain at least one special character.');
+      return;
+    }
     createUser(email, password)
       .then(() => {
         updateProfile(auth.currentUser, {
