@@ -27,11 +27,7 @@ const Home = () => {
       <section data-aos="flip-right" data-aos-duration="1000">
         <Services></Services>
       </section>
-      <section
-        data-aos="flip-left"
-        data-aos-duration="500"
-        className="bg-blend-darken"
-      >
+      <section data-aos="flip-left" data-aos-duration="1000">
         <TeamMember></TeamMember>
       </section>
       <section
